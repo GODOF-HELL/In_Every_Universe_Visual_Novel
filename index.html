@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>In Every Universe, I'd Find You</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<audio id="bgMusic" preload="auto">
+  <source src="music .mp3" type="audio/mpeg">
+</audio>
+<div id="fullscreenGate" class="fullscreen-gate">
+  <img src="images/00.jpg" alt="Our Story" class="gate-image">
+
+  <div class="gate-content">
+    <div class="gate-subtitle">A small universe made for you</div>
+    <button id="enterFullscreen" class="enter-fullscreen">
+      Tap to Begin ✨
+    </button>
+  </div>
+</div>
+
+<div id="app">
+  <section class="scene active" id="s0">
+    <img src="images/01.jpg" alt="">
+        <div class="overlay">
+    <div class="chapter-subtitle" data-text="This is our universe, 
+Now im taking you to other Universe."></div>
+
+      <p>Slide the shooting star to begin our story.</p>
+      <div class="slider">
+        <div class="track"></div>
+        <div class="star" id="startStar">&#10023;</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="s1">
+    <img src="images/02.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 1</div>
+      <div class="chapter-subtitle" data-text="You were just another face on a random street. Then somehow, seeing you became part of my everyday."></div>
+
+      <p>Drag the paper airplane across the screen.</p>
+      <div class="slider">
+        <div class="track"></div>
+        <div class="star" id="plane">&#9992;</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="s2">
+    <img src="images/03.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 2</div>
+      <div class="chapter-subtitle" data-text= "One afternoon the rain caught both of us off guard. We stepped into the same café, and strangers became a little less strange."></div> 
+<p>Press and hold the umbrella for 2 seconds.</p>
+  <div class="umbrella-handle" id="umbrella">
+  <div class="ring"></div>
+  <div class="icon">&#9730;</div>
+</div>
+    </div>
+  </section>
+
+  <section class="scene" id="s3">
+    <img src="images/04.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 3</div>
+          <div class="chapter-subtitle" data-text="One conversation turned into another. Without noticing, we had already started collecting small moments together."></div>
+      <p>Swipe left or right anywhere on the screen.</p>
+    </div>
+  </section>
+
+<section class="scene" id="s4">
+  <img src="images/05.jpg" alt="">
+  <div class="overlay">
+    <div class="chapter">Chapter 4</div>
+    <div class="chapter-subtitle" data-text="You told me you loved cherry blossoms. So every spring after that began to feel like it belonged to us."></div>
+    <p>Catch the blossoms before they drift away.</p>
+
+    <div class="petal-field" id="petalField">
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+    </div>
+  </div>
+</section>
+
+  <section class="scene" id="s5">
+    <img src="images/06.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 5</div>
+     <div class="chapter-subtitle" data-text="We stood beneath those blossoms until the sky turned dark. When we finally looked up, we laughed while counting stars that were never ours."></div>
+      <p>Draw a line across the sky.</p>
+      <canvas id="sky"></canvas>
+    </div>
+  </section>
+
+  <section class="scene" id="s6">
+    <img src="images/07.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 6</div>
+      <p>Slide the glowing heart across the cake.</p>
+      <div class="chapter-subtitle" data-text="Months passed before we even realized how much of life we had shared."></div>
+      <div class="slider">
+        <div class="track"></div>
+        <div class="star" id="heart">&#9825;</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="s11">
+    <img src="images/12.jpg" alt="">
+    <div class="overlay">
+      <div class="chapter">Chapter 7</div>
+      <div class="chapter-subtitle" data-text="On your birthday I forgot to wish you first, and you were adorably angry about it."></div>
+  <div class="touch-circle" id="candle">
+  <div class="inner-glow"></div>
+      <div class="fingerprint">&#128367;</div>
+</div>
+<p class="touch-text">Light the Candle</p>
+    </div>
+  </section>
+  <!-- Scene 9 -->
+<section class="scene" id="s12">
+  <img src="images/13.jpg" alt="">
+  <div class="overlay">
+    <div class="chapter">Chapter 8</div>
+    <div class="chapter-subtitle" data-text=" To make you smile again, we talked about that cherry blossom night."></div>
+    <div class="overlay">
+    <div class="petal-field" id="petalField2">
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+      <div class="petal">&#10048;</div>
+    </div>
+  </div>
+</section>
+
+<!-- Scene 10 -->
+<section class="scene" id="s10">
+  <img src="images/11.jpg" alt="">
+  <div class="overlay">
+    <div class="chapter">Chapter 10</div>
+   <div class="chapter-subtitle" data-text ="Slowly, those laughs and late-night walks became something deeper. We stopped searching for signs because we had become one with moments we never photographed because we was too busy living them."></div>
+    <p>Swipe the photo away, and imagine the one we still have left to take.</p>
+
+    <div class="polaroid" id="polaroid">
+      <img src="images/11a.jpg" alt="Polaroid">
+    </div>
+  </div>
+</section>
+
+<!-- Scene 11 -->
+<section class="scene" id="s9">
+  <img src="images/10.jpg" alt=>
+
+  <div class="overlay">
+    <div class="chapter">Chapter 8</div>
+   <div class="chapter-subtitle" data-text="Then we wrote our names on lanterns and filled the sky with them."></div>
+    <p>Lift the lantern and let it carry our wish.</p>
+
+    <div class="lantern-area">
+      <div class="lantern" id="lantern">&#127982;</div>
+    </div>
+  </div>
+</section>
+
+<!-- Scene 12 -->
+<section class="scene" id="s7">
+  <img src="images/08.jpg" alt="">
+
+  <div class="chapter">CHAPTER 13</div>
+  <div class="chapter-subtitle" data-text="This is how I imagine us somewhere else— a story that began in the rain, bloomed under cherry blossoms, reached the stars, and somehow always found its way back to you."></div>
+ <div class="overlay">
+    <div class="touch-circle" id="promise">
+      <div class="inner-glow"></div>
+      <div class="fingerprint"></div>
+    </div>
+
+    <p class="touch-text">Place your hand here</p>
+  </div>
+</section>
+
+<!-- Scene 13 -->
+<section class="scene" id="s8">
+  <img src="images/09.jpg" alt="">
+
+  <div class="chapter">Chapter 9</div>
+  <div class="chapter-subtitle" data-text="Maybe that was the night the stars learned your name. Maybe that was the night they decided to bring us closer."></div>
+  <div class="overlay">
+    <p>Touch the brightest star.</p>
+
+    <div class="star-field">
+      <div class="small-star" style="top:18%;left:22%;"></div>
+      <div class="small-star" style="top:32%;left:68%;"></div>
+      <div class="small-star" style="top:62%;left:28%;"></div>
+      <div class="small-star" style="top:74%;left:72%;"></div>
+
+      <div class="bright-star" id="brightStar">&#10022;</div>
+    </div>
+  </div>
+</section>
+
+<!-- Scene 14 -->
+<section class="scene" id="s13">
+  <img src="images/14.jpg" alt="">
+<div class="chapter-subtitle" data-text="Even after seasons changed, Some places hold love longer than people do."></div>
+<div class="overlay names-overlay">
+<div class="chapter"> Chapter 11</div>
+  <p>Pull our names together.</p>
+
+  <div class="merge-area" id="mergeArea">
+  <div class="name left" id="hritvik">HRITVIK</div>
+  <div class="name right" id="shalini">SHALINI</div>
+
+  <canvas id="mergeCanvas"></canvas>
+
+  <div class="merged-name" id="shivika"></div>
+</div>
+</section>
+
+<section class="scene" id="s14">
+  <img src="images/15.jpg" alt="">
+
+  <div class="overlay">
+    <div class="chapter">Chapter 12</div>
+    <div class="chapter-subtitle" data-text="Somewhere between all those ordinary days, we began promising forever. Not dramatically—just quietly, like it had always been true."></div>
+ <p>Slide the ring into place.</p>
+
+    <div class="slider">
+      <div class="track"></div>
+      <div class="star" id="ring">&#128141;</div>
+    </div>
+  </div>
+</section>
+
+<!-- Scene 16 -->
+<section class="scene" id="s15">
+  <img src="images/16.jpg" alt="">
+  <div class="overlay">
+    <div class="chapter">Final Chapter</div>
+    <div class="chapter-subtitle" data-text="Maybe this is only one universe among countless others. But I know I would still choose you in every one of them."></div>
+   <p>Place your hand here.</p>
+
+    <div class="touch-circle" id="promiseFinal">
+      <div class="inner-glow"></div>
+      <div class="fingerprint"></div>
+    </div>
+  </div>
+</section>
+<section class="scene" id="s16">
+  <img src="images/17.jpg" alt="">
+
+  <div class="overlay story-overlay">
+    <div class="chapter">Us in other Universe.</div>
+
+ <div id="storyText" class="story-text"></div>
+
+<div class="story-end">
+  <button class="replay hidden" id="replayStory">Begin Again</button>
+</div>
+</section>
+</div>
+
+<script src="script.js"></script>
+<div class="stars"></div>
+</body>
+</html>
